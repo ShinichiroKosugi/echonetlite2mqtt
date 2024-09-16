@@ -1,10 +1,12 @@
-# MRA Release note (V1.1.1)
+# MRA Release note (V1.3.0)
 
-2022.07.13
+2024.08.02
 
-- Data version: 1.1.1
-- Data format version: 1.1.0
-- Appendix Release version: P (rev.1)
+- Data version: 1.3.0
+- Data format version: 1.2.0
+- Appendix Release version: R (rev.2)
+
+Release R  (rev.2) 対応。新たに5機種を追加し、一部修正する。
 
 ## Revision history
 
@@ -12,20 +14,73 @@ Data version | Date | Description
 :---|:---|:---
 1.0.0 | 2021.11.17 | Official release
 1.0.1 | 2021.12.01 | MRA v1.0.0 から作成した device description の validation で見つかった不具合対応
-1.1.0 | 2022.05.27 | Appendix Release version N, P, P (rev.1) 対応</br>8種類の機器追加</br>Release P英語版におけるTypo等の修正対応</br>
-1.1.1 | 2022.07.13 | MRA v1.1.0 から作成した device description の validation で見つかった不具合対応 </br>
+1.1.0 | 2022.05.27 | Appendix Release version N, P, P (rev.1) 対応</br>8種類の機器追加</br>Release P英語版におけるTypo等の修正対応
+1.2.0 | 2023.04.28 | Appendix Release version Q, Q (rev.1) 対応</br>1種類の機器追加</br>
+1.3.0 | 2023.08.02 | Appendix Release version R, R (rev.2) 対応</br>5種類の機器追加</br>
 
+## 追加機器
 
-## MRA V1.1.1 変更内容
+今回追加公開する機器オブジェクトは以下の5機種です。
 
-File | EPC | 変更内容
-:-----|:-----------|:---
-definitions.json | - | state_NoSetting_00内の"none"を"noSetting"へ変更 
-0x0000.json | 0x8F | 記述の内容を修正
-0x0272.json | 0xDA | shortNameを修正
-0x027A.json | 0xD2 | shortNameを修正
-0x0130_mcrule.json | 0x90, 0x94 | EPCのtypeを修正
+EOJ|機器名|Device name|
+:-----------------------|:--------------------------------------|:-------|
+0x0002|防犯センサ|Crime prevention sensor　
+0x0260|電動ブラインド・日よけ|Electrically operated blind/shade
+0x02A7|周波数制御|Frequency regulation　
+0x02A5|マルチ入力PCS|Multiple input PCS
+0x028F|双方向対応高圧スマート電力量メータ|Bidirectional high voltage smart electric energy meter
 
+## 修正
+
+今回修正公開する機器オブジェクトは、以下のスーパークラスおよび5機種です。
+
+EOJ|機器名|Device name|
+:-----------------------|:--------------------------------------|:-------|
+0x0000|スーパークラス|Super class
+0x0263|電動雨戸・シャッタ|Electrically operated rain sliding door/shutter
+0x0279|住宅用太陽光発電|Household solar power generation
+0x027D|蓄電池|Storage battery 
+0x02A1|電気自動車充電器|EV charger 
+0x0288|低圧スマート電力量メータ|Low-voltage smart electric energy meter 
+
+# MRA Release note (V1.2.0)
+
+2023.04.28
+
+- Data version: 1.2.0
+- Data format version: 1.1.0
+- Appendix Release version: Q (rev.1)
+
+Release Q  (rev.1) 対応。新たに1機種を追加し、一部修正する。
+
+## Revision history
+
+Data version | Date | Description
+:---|:---|:---
+1.0.0 | 2021.11.17 | Official release
+1.0.1 | 2021.12.01 | MRA v1.0.0 から作成した device description の validation で見つかった不具合対応
+1.1.0 | 2022.05.27 | Appendix Release version N, P, P (rev.1) 対応</br>8種類の機器追加</br>Release P英語版におけるTypo等の修正対応
+1.2.0 | 2023.04.28 | Appendix Release version Q, Q (rev.1) 対応</br>1種類の機器追加</br>
+
+## 追加機器
+
+今回追加公開する機器オブジェクトは以下の1機種です。
+
+EOJ|機器名|Device name|
+:-----------------------|:--------------------------------------|:-------|
+0x028E|分散型電源電力量メータ|Distributed generator's electric energy meter
+
+## 修正
+
+今回修正公開する機器オブジェクトは、以下のスーパークラスおよび4機種です。
+
+EOJ|機器名|Device name|
+:-----------------------|:--------------------------------------|:-------|
+0x0000|スーパークラス|Super class
+0x026B|電気温水器|Electric water heater
+0x027E|電気自動車充放電器|EV charger and discharger
+0x0281|水流量メータ|Water flowmeter
+0x05FF|コントローラ|Controller
 
 # MRA Release note (V1.1.0)
 
@@ -59,6 +114,7 @@ EOJ|機器名|Device name|
 0x0282|ガスメータ|Gas meter
 0x028D|スマート電力量サブメータ（MCRuleも追加）|Smart electric energy meter for sub-metering
 0x02A3|照明システム|Lighting system
+
 ## definitions の修正
 
 - definitions に以下の項目を追加
@@ -67,6 +123,7 @@ EOJ|機器名|Device name|
   - number_0-999999999m3
   - state_LightColor_40-44FD
   - state_NoData_FFFE
+
 # MRA Release note (V1.0.1)
 
 2022.01.07
@@ -74,12 +131,14 @@ EOJ|機器名|Device name|
 - Data version: 1.0.1
 - Data format version: 1.0.0
 - Appendix Release version: M
+
 ## Revision history
 
 Data version | Date | Description
 :-----|:-----------|:---
 1.0.0 | 2021.11.17 | Official release
 1.0.1 | 2021.12.01 | MRA V1.0.0 から作成した DD の validation で見つかった不具合対応</br>その他マイナーな修正
+
 ## MRA V1.0.1 変更内容
 
 File | EPC | 変更内容
