@@ -1164,7 +1164,7 @@ class EchoNetDefinitionRepository
   {
     if(EchoNetDefinitionRepository.definitionsCache===undefined)
     {
-      const definitionsJsonPath = path.join(__dirname, "../MRA_V1.3.0/mraData/definitions/definitions.json");
+      const definitionsJsonPath = path.join(__dirname, "../MRA_v1.3.0/mraData/definitions/definitions.json");
       const definitionsText = fs.readFileSync(definitionsJsonPath, {encoding:"utf8"});
       EchoNetDefinitionRepository.definitionsCache = JSON.parse(definitionsText) as ElDefinitions;
     }
@@ -1175,7 +1175,7 @@ class EchoNetDefinitionRepository
   {
     if(EchoNetDefinitionRepository.superClassCache===undefined)
     {
-      const superClassJsonPath = path.join(__dirname, `../MRA_V1.3.0/mraData/superClass/0x0000.json`);
+      const superClassJsonPath = path.join(__dirname, `../MRA_v1.3.0/mraData/superClass/0x0000.json`);
       const superClassText = fs.readFileSync(superClassJsonPath, {encoding:"utf8"});
       EchoNetDefinitionRepository.superClassCache = JSON.parse(superClassText) as ElDeviceDescription;
     }
@@ -1204,7 +1204,7 @@ class EchoNetDefinitionRepository
     }
     if(device === undefined)
     {
-      const deviceJsonPath = path.join(__dirname, `../MRA_V1.3.0/mraData/devices/${eojClass}.json`);
+      const deviceJsonPath = path.join(__dirname, `../MRA_v1.3.0/mraData/devices/${eojClass}.json`);
       if(fs.existsSync(deviceJsonPath))
       {
         const deviceText = fs.readFileSync(deviceJsonPath, {encoding:"utf8"});
@@ -1215,7 +1215,7 @@ class EchoNetDefinitionRepository
 
     if(device === undefined && eojClass.toLowerCase() === "0x0ef0")
     {
-      const deviceJsonPath = path.join(__dirname, `../MRA_V1.3.0/mraData/nodeProfile/${eojClass}.json`);
+      const deviceJsonPath = path.join(__dirname, `../MRA_v1.3.0/mraData/nodeProfile/${eojClass}.json`);
       const deviceText = fs.readFileSync(deviceJsonPath, {encoding:"utf8"});
       device = JSON.parse(deviceText) as ElDeviceDescription;
       device.elProperties.push(...superClass.elProperties);

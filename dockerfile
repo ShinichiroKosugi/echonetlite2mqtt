@@ -19,7 +19,7 @@ COPY package*.json ./
 USER node
 
 RUN npm install --only=production
-COPY --chown=node:node --from=build /app/MRA_V1.3.0 ./MRA_V1.3.0
+COPY --chown=node:node --from=build /app/MRA_v1.3.0 ./MRA_v1.3.0
 COPY --chown=node:node --from=build /app/MRA_custom ./MRA_custom
 COPY --chown=node:node --from=build /app/views ./views
 COPY --chown=node:node --from=build /app/public ./public
